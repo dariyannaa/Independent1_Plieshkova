@@ -2,255 +2,374 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Демо-сторінка HTML + CSS</title>
-    <link rel="stylesheet" href="myCss.css" />
+    <title>Самостійна робота №1</title>
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.w3schools.com/favicon.ico"
+    />
   </head>
 
-  <body>
-    <div class="page" id="home">
-      <h1 class="section-title">Демонстраційна сторінка</h1>
+  <body background="https://www.w3schools.com/html/img_girl.jpg">
+    <header>
+      <h1>Самостійна робота №1</h1>
       <p>
-        Тут зібрані короткі приклади основних HTML-елементів. Частина стилів
-        задається у файлі <b>myCss.css</b>.
+        Структура HTML-документа, посилання, таблиці, зображення, списки, форми.
       </p>
+    </header>
 
-      <h2>Навігація</h2>
-      <p>Швидкі переходи між секціями сторінки:</p>
+    <hr />
 
-      <ul class="nav-menu">
-        <li><a href="#home">Старт</a></li>
-        <li><a href="#links">Посилання</a></li>
-        <li><a href="#media">Зображення</a></li>
-        <li><a href="#forms">Форми</a></li>
-        <li><a href="#tables">Таблиці</a></li>
-      </ul>
-
-      <h2>Заголовки та текст</h2>
-      <h1>Великий заголовок (H1)</h1>
-      <h2>Підзаголовок (H2)</h2>
-      <h3>Ще менший заголовок (H3)</h3>
-
-      <p>
-        Це приклад абзацу. Він показує, як браузер відображає звичайний текст і
-        автоматично переносить рядки.
-      </p>
-      <p>
-        А це другий абзац — зазвичай між абзацами є відступ, який можна змінити
-        CSS-стилями.
-      </p>
-
-      <button type="button">Приклад кнопки</button>
-
-      <h2>Списки</h2>
-      <p>Нижче — приклади маркованого та нумерованого списків:</p>
-
-      <h3>Маркований список</h3>
+    <nav>
+      <h2>Навігація по сторінці (закладки)</h2>
       <ul>
-        <li>Ноутбук</li>
-        <li>Телефон</li>
-        <li>Навушники</li>
+        <li><a href="#structure">1. Структура та текст</a></li>
+        <li><a href="#links">2. Посилання</a></li>
+        <li><a href="#images">3. Зображення</a></li>
+        <li><a href="#tables">4. Таблиці</a></li>
+        <li><a href="#lists">5. Списки</a></li>
+        <li><a href="#forms">6. Форми</a></li>
+        <li><a href="#html5">7. HTML5 елементи</a></li>
       </ul>
+    </nav>
 
-      <h3>Нумерований список</h3>
-      <ol>
-        <li>Відкрити сторінку</li>
-        <li>Переглянути приклади</li>
-        <li>Спробувати змінити CSS</li>
-      </ol>
+    <hr />
 
-      <h1 class="section-title" id="links">Посилання</h1>
+    <section id="structure">
+      <h2>1. Структура HTML-документа, заголовки, параграфи</h2>
+
+      <h3>1.1. Заголовки</h3>
+      <h1>Приклад заголовка H1</h1>
+      <h2>Приклад заголовка H2</h2>
+      <h3>Приклад заголовка H3</h3>
+      <h4>Приклад заголовка H4</h4>
+      <h5>Приклад заголовка H5</h5>
+      <h6>Приклад заголовка H6</h6>
+
+      <h3>1.2. Параграфи та форматування тексту</h3>
+      <p>Це звичайний параграф тексту.</p>
       <p>
-        Нижче — посилання, оформлене як кнопка (через клас
-        <code>btn-link</code>):
+        Це <b>жирний</b> текст, це <i>курсив</i>, а це
+        <u>підкреслений</u> текст.
       </p>
-      <a class="btn-link" href="https://w3schools.com/" target="_blank"
-        >Перейти до довідника</a
-      >
-
       <p>
-        А це звичайне посилання всередині тексту:
-        <a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a
-        >.
+        Також можна використовувати теги <strong>strong</strong> та
+        <em>em</em> для логічного виділення.
+      </p>
+      <p>Розрив рядка всередині параграфа<br />за допомогою тега &lt;br&gt;.</p>
+    </section>
+
+    <hr />
+
+    <section id="links">
+      <h2>2. Посилання</h2>
+
+      <h3>2.1. Зовнішнє посилання</h3>
+      <p>
+        <a
+          href="https://w3schoolsua.github.io/html/html_intro.html"
+          target="_blank"
+        >
+          Відкрити «Що таке HTML?» у новій вкладці
+        </a>
       </p>
 
-      <h1 class="section-title" id="media">Зображення та карта зображення</h1>
+      <h3>2.2. Внутрішнє посилання (на інший розділ цієї сторінки)</h3>
       <p>
-        Приклад вставки картинки з папки <code>images</code> (переконайся, що
-        файл існує у репозиторії):
+        <a href="#forms">Перейти до розділу «Форми»</a>
+      </p>
+
+      <h3>2.3. Посилання-пошта (mailto)</h3>
+      <p>
+        <a href="mailto:student@example.com"
+          >Написати листа на student@example.com</a
+        >
+      </p>
+
+      <h3>2.4. Закладка всередині розділу</h3>
+      <p id="bookmark-example">
+        Це місце з закладкою (якір з id="bookmark-example").
+      </p>
+      <p>
+        <a href="#bookmark-example">Натисни, щоб перейти до цієї ж закладки</a>
+      </p>
+    </section>
+
+    <hr />
+
+    <section id="images">
+      <h2>3. Зображення</h2>
+
+      <h3>3.1. Просте зображення</h3>
+      <p>
+        Це зображення завантажується з сайту W3Schools (нічого додавати не
+        треба).
+      </p>
+      <img
+        src="https://www.w3schools.com/html/img_chania.jpg"
+        alt="Місто Чанія"
+        width="300"
+        height="200"
+      />
+
+      <h3>3.2. Карта зображення (image map)</h3>
+      <p>
+        Натисни на верхню частину зображення — відкриється сторінка про карти
+        зображень.
       </p>
 
       <img
-        src="./images/coca-cola.jpg"
-        width="520"
-        height="620"
-        alt="Демонстраційне зображення"
+        src="https://www.w3schools.com/html/workplace.jpg"
+        alt="Workplace"
+        usemap="#workmap"
+        width="400"
+        height="379"
       />
 
-      <h2>Карта зображення</h2>
-      <p>
-        Натисни на виділену ділянку на зображенні — вона відкриє інший файл:
-      </p>
-
-      <img src="./images/laptop.jfif" alt="Робоче місце" usemap="#workmap" />
       <map name="workmap">
         <area
           shape="rect"
-          coords="34,44,270,350"
-          alt="Перехід на зображення"
-          href="./images/coca-cola.jpg"
+          coords="0,0,400,150"
+          href="https://w3schoolsua.github.io/html/html_images_imagemap.html"
+          alt="Посилання на приклад карт зображень"
         />
       </map>
 
-      <h2>Блок з фоном</h2>
-      <div class="demo-box">
-        Цей блок має фонову картинку, рамку та відступи (усе задається в CSS).
-        <br /><br />
-        Можеш змінити фон, прозорість або шрифт у <b>myCss.css</b>.
-      </div>
+      <h3>3.3. Елемент &lt;picture&gt;</h3>
+      <p>Для різної ширини екрану браузер вибирає різне зображення .</p>
 
-      <h1 class="section-title" id="tables">Таблиці</h1>
+      <picture>
+        <source
+          srcset="https://www.w3schools.com/html/img_girl.jpg"
+          media="(min-width: 800px)"
+        />
+        <source
+          srcset="https://www.w3schools.com/html/img_chania.jpg"
+          media="(min-width: 500px)"
+        />
+        <img
+          src="https://www.w3schools.com/html/img_smallflower.jpg"
+          alt="Демонстрація елемента picture"
+        />
+      </picture>
+
+      <h3>3.4. Фавікон</h3>
       <p>
-        Таблиця нижче стилізована базовими правилами для <code>table</code>,
-        <code>th</code> та <code>td</code>.
+        Фавікон підключений у секції &lt;head&gt; через тег &lt;link
+        rel="icon"&gt;.
       </p>
+    </section>
 
-      <table>
+    <hr />
+
+    <section id="tables">
+      <h2>4. Таблиці</h2>
+
+      <h3>4.1. Проста таблиця з заголовком</h3>
+      <table border="1">
+        <caption>
+          Розклад пар
+        </caption>
         <tr>
-          <th style="width: 55%">Назва</th>
-          <th style="width: 25%">Категорія</th>
-          <th>Оцінка</th>
+          <th>День</th>
+          <th>Предмет</th>
+          <th>Аудиторія</th>
         </tr>
         <tr>
-          <td>Варіант A</td>
-          <td>Демо</td>
-          <td>8/10</td>
+          <td>Понеділок</td>
+          <td>Програмування</td>
+          <td>101</td>
         </tr>
         <tr>
-          <td>Варіант B</td>
-          <td>Навчання</td>
-          <td>9/10</td>
-        </tr>
-        <tr>
-          <td>Варіант C</td>
-          <td>Практика</td>
-          <td>7/10</td>
+          <td>Вівторок</td>
+          <td>Веб-технології</td>
+          <td>202</td>
         </tr>
       </table>
 
-      <br />
-
-      <p>Таблиця з чергуванням рядків (через <code>#t01</code>):</p>
-
-      <table id="t01">
+      <h3>4.2. Colspan &amp; Rowspan</h3>
+      <table border="1">
         <tr>
-          <th>Пункт</th>
-          <th>Статус</th>
-          <th>Примітка</th>
+          <th>Ім'я</th>
+          <th colspan="2">Оцінки</th>
         </tr>
         <tr>
-          <td>Структура сторінки</td>
-          <td>Готово</td>
-          <td>Секції та навігація</td>
+          <td rowspan="2">Іван</td>
+          <td>Математика</td>
+          <td>95</td>
         </tr>
         <tr>
-          <td>Стилізація CSS</td>
-          <td>Готово</td>
-          <td>Кольори та таблиці</td>
-        </tr>
-        <tr>
-          <td>Перевірка посилань</td>
-          <td>У процесі</td>
-          <td>Переконатися, що шляхи правильні</td>
+          <td>Інформатика</td>
+          <td>88</td>
         </tr>
       </table>
 
-      <h2>Збереження форматування (pre)</h2>
-      <p>
-        Тег <code>pre</code> залишає пробіли та перенос рядків так, як у коді:
-      </p>
+      <h3>4.3. Colgroup (група стовпців)</h3>
+      <table border="1">
+        <colgroup>
+          <col span="1" />
+          <col span="1" />
+          <col span="1" />
+        </colgroup>
+        <tr>
+          <th>Товар</th>
+          <th>Кількість</th>
+          <th>Ціна</th>
+        </tr>
+        <tr>
+          <td>Книга</td>
+          <td>2</td>
+          <td>300 грн</td>
+        </tr>
+        <tr>
+          <td>Зошит</td>
+          <td>5</td>
+          <td>25 грн</td>
+        </tr>
+      </table>
+    </section>
 
-      <pre>
-Рядок 1: текст з відступами
-Рядок 2:      видно пробіли
-Рядок 3: форматування зберігається
-</pre
-      >
+    <hr />
 
-      <h1 class="section-title" id="forms">Форми</h1>
-      <p>Простий приклад форми (відправляє дані на тестову сторінку):</p>
+    <section id="lists">
+      <h2>5. Списки</h2>
 
-      <form action="https://www.w3schools.com/action_page.php" target="_blank">
-        Ім'я:<br />
-        <input type="text" name="firstname" placeholder="Введи ім'я" />
-        <br />
-        Прізвище:<br />
-        <input type="text" name="lastname" placeholder="Введи прізвище" />
-        <br /><br />
-        <input type="submit" value="Надіслати" />
+      <h3>5.1. Невпорядкований список (ul)</h3>
+      <ul>
+        <li>Кава</li>
+        <li>Чай</li>
+        <li>Сік</li>
+      </ul>
+
+      <h3>5.2. Впорядкований список (ol)</h3>
+      <ol>
+        <li>Підготуватися до пари</li>
+        <li>Виконати лабораторну</li>
+        <li>Завантажити роботу в Classroom</li>
+      </ol>
+
+      <h3>5.3. Список визначень (dl)</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>Мова розмітки гіпертексту.</dd>
+
+        <dt>Form</dt>
+        <dd>Елемент HTML для збору даних від користувача.</dd>
+      </dl>
+    </section>
+
+    <hr />
+
+    <section id="forms">
+      <h2>6. Форми</h2>
+
+      <h3>6.1. Приклад форми з різними типами введення</h3>
+
+      <form action="https://example.com/submit" method="get">
+        <p>
+          <label for="fname">Ім'я:</label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="Введіть ім'я"
+          />
+        </p>
+
+        <p>
+          <label for="email">E-mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Введіть email"
+          />
+        </p>
+
+        <p>
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" />
+        </p>
+
+        <p>
+          <span>Стать:</span>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Чоловіча</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Жіноча</label>
+        </p>
+
+        <p>
+          <span>Інтереси:</span>
+          <input
+            type="checkbox"
+            id="coding"
+            name="interest_coding"
+            value="yes"
+          />
+          <label for="coding">Програмування</label>
+          <input type="checkbox" id="music" name="interest_music" value="yes" />
+          <label for="music">Музика</label>
+        </p>
+
+        <p>
+          <label for="faculty">Факультет:</label>
+          <select id="faculty" name="faculty">
+            <option value="fiot">ФІОТ</option>
+            <option value="its">ІТС</option>
+            <option value="other">Інший</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="birthdate">Дата народження:</label>
+          <input type="date" id="birthdate" name="birthdate" />
+        </p>
+
+        <p>
+          <label for="about">Коротко про себе:</label><br />
+          <textarea id="about" name="about" rows="4" cols="40"></textarea>
+        </p>
+
+        <p>
+          <input type="submit" value="Надіслати" />
+          <input type="reset" value="Очистити" />
+        </p>
       </form>
+    </section>
 
-      <br />
+    <hr />
 
-      <h2>Вибір зі списку</h2>
-      <select name="device" size="3">
-        <option value="pc">ПК</option>
-        <option value="tablet">Планшет</option>
-        <option value="phone">Смартфон</option>
-        <option value="tv">Телевізор</option>
-      </select>
+    <section id="html5">
+      <h2>7. HTML5 елементи: header, section, article, footer</h2>
 
-      <br /><br />
+      <article>
+        <header>
+          <h3>Невелика стаття</h3>
+          <p><small>Автор: студент групи ІС-32</small></p>
+        </header>
 
-      <h2>Текстове поле</h2>
-      <textarea
-        name="message"
-        rows="6"
-        cols="30"
-        placeholder="Напиши повідомлення..."
-      ></textarea>
+        <section>
+          <h4>Підрозділ 1</h4>
+          <p>Тут може бути опис обраної предметної галузі.</p>
+        </section>
 
-      <br /><br />
+        <section>
+          <h4>Підрозділ 2</h4>
+          <p>Тут можна коротко написати про структуру майбутнього сайту.</p>
+        </section>
 
-      <button type="button" onclick="alert('Повідомлення показано!')">
-        Показати alert
-      </button>
+        <footer>
+          <p><small>Кінець статті.</small></p>
+        </footer>
+      </article>
+    </section>
 
-      <br /><br />
+    <hr />
 
-      <h2>Datalist (підказки)</h2>
-      <form>
-        <input list="browsers" placeholder="Обери або введи браузер" />
-        <datalist id="browsers">
-          <option value="Chrome"></option>
-          <option value="Firefox"></option>
-          <option value="Edge"></option>
-          <option value="Opera"></option>
-          <option value="Safari"></option>
-        </datalist>
-      </form>
-
-      <br />
-
-      <h2>Output (розрахунок)</h2>
-      <p>Зміни повзунок або число — отримаєш суму:</p>
-
-      <form
-        action="https://www.w3schools.com/action_page.php"
-        target="_blank"
-        oninput="x.value=parseInt(a.value)+parseInt(b.value)"
-      >
-        0
-        <input type="range" id="a" name="a" value="40" />
-        100 +
-        <input type="number" id="b" name="b" value="60" />
-        =
-        <output name="x" for="a b"></output>
-        <br /><br />
-        <input type="submit" value="Відправити результат" />
-      </form>
-
-      <br />
-    </div>
+    <footer>
+      <p>&copy; 2025</p>
+    </footer>
   </body>
 </html>
